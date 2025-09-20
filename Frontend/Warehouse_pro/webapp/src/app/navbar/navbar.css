@@ -1,0 +1,69 @@
+.custom-toolbar {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background-color:white;
+  color: black;
+}
+
+.nav-wrapper {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Times New Roman';
+  color: black;
+  transition: transform 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.click {
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  font-size: 16px;
+  color: black !important;
+  display: inline-block; 
+  background-color: transparent; 
+  z-index: 2;
+
+
+}
+
+a.click {
+  margin-top: 10px;
+}
+
+
+
+.click:hover {
+  color: #4f688d !important;
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,45 @@
+<div class="auth-container">
+  <mat-card class="auth-card" #card>
+    <mat-card-title class="login-title">Welcome Back</mat-card-title>
+    <mat-card-subtitle class="login-subtitle">Please login to continue</mat-card-subtitle>
+
+    <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          required
+          name="email"
+          [value]="maskedEmail"
+          (input)="onEmailInput($event)" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          [type]="showPassword ? 'text' : 'password'"
+          required
+          name="password"
+          [(ngModel)]="credentials.password" />
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="togglePasswordVisibility()"
+          aria-label="Toggle password visibility">
+          <mat-icon>{{ showPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div *ngIf="errorMessage" class="error-msg">
+        {{ errorMessage }}
+      </div>
+
+      <button mat-raised-button color="primary" class="full-width login-button" type="submit">
+        Login
+      </button>
+    </form>
+  </mat-card>
+</div>

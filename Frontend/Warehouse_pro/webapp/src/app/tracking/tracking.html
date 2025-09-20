@@ -1,0 +1,30 @@
+<div class="track-container">
+  <h2>Shipment & Container Tracking</h2>
+  <p>Select your booking type and enter your tracking number.</p>
+
+  <form (ngSubmit)="trackShipment()">
+    <mat-form-field appearance="outline">
+      <mat-label>Cargo Type</mat-label>
+      <mat-select [(ngModel)]="cargoType" name="cargoType" required>
+        <mat-option value="Ocean cargo">Ocean cargo</mat-option>
+        <mat-option value="Air cargo">Air cargo</mat-option>
+        <mat-option value="sea">Sea</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Container or B/L Number</mat-label>
+      <input matInput [(ngModel)]="trackingNumber" name="trackingNumber" required />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Track</button>
+  </form>
+
+  <div *ngIf="result" class="result">
+    <p><strong>Status:</strong> {{ result.status }}</p>
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+</div>

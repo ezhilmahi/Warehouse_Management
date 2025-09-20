@@ -1,0 +1,20 @@
+<div class="user-container">
+  <h2 class="heading">Explore Our Electronics</h2>
+
+  <div class="product-grid">
+    <mat-card *ngFor="let product of products$ | async" class="product-card" matRipple>
+      <mat-card-title class="product-title">{{ product.productName }}</mat-card-title>
+
+      <mat-card-content>
+        <div class="product-price">₹{{ product.productPrice }}</div>
+        <div class="product-stock">Stock: {{ product.productQuantity }}</div>
+        <p class="product-details">{{ product.productDetails }}</p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button class="book-btn" [routerLink]="['/booking']">Book Now</button>
+
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+.booking-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.booking-title {
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.submit-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: scale(1.05);
+  background-color: #007acc;
+  color: white;
+}

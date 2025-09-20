@@ -1,0 +1,52 @@
+<h2 class="animate booking-title">Book a Product</h2>
+
+<form (ngSubmit)="submitBooking()" #bookingForm="ngForm" class="booking-form">
+
+  <mat-form-field class="full-width animate">
+    <mat-label>Product Name</mat-label>
+    <input matInput required [(ngModel)]="booking.productName" name="productName" />
+  </mat-form-field>
+
+  <mat-form-field class="full-width animate">
+  <mat-label>Quantity</mat-label>
+  <input matInput type="number" required min="1" [(ngModel)]="booking.quantity" name="quantity" />
+</mat-form-field>
+
+
+  <mat-form-field class="full-width animate">
+    <mat-label>Customer Name</mat-label>
+    <input matInput required [(ngModel)]="booking.customerName" name="customerName" />
+  </mat-form-field>
+
+  <mat-form-field class="full-width animate" appearance="fill">
+    <mat-label>Import or Export</mat-label>
+    <mat-select required [(ngModel)]="booking.type" name="type">
+      <mat-option value="Import">Import</mat-option>
+      <mat-option value="Export">Export</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="full-width animate" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput required [(ngModel)]="booking.email" name="email" />
+  </mat-form-field>
+
+  <mat-form-field class="full-width animate">
+    <mat-label>Transportation Mode</mat-label>
+    <mat-select required [(ngModel)]="booking.transportMode" name="transportMode">
+      <mat-option value="Air">Air</mat-option>
+      <mat-option value="Sea">Sea</mat-option>
+      <mat-option value="Road">Road</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="full-width animate" appearance="fill">
+    <mat-label>Tracking Number</mat-label>
+    <input matInput [(ngModel)]="booking.trackingNumber" name="trackingNumber" required />
+  </mat-form-field>
+
+  <button class="animate submit-button" mat-raised-button color="primary" type="submit" [disabled]="!bookingForm.valid">
+    Submit Booking
+  </button>
+
+</form>

@@ -1,0 +1,43 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  animation: fadeIn 1s ease-in;
+}
+
+.auth-card {
+  width: 480px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.error-msg {
+  color: red;
+  margin: 5px 0 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.success-msg {
+  color: green;
+  margin: 5px 0 10px;
+  font-size: 14px;
+  text-align: center;
+}

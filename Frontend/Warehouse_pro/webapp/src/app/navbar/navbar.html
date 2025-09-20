@@ -1,0 +1,14 @@
+<mat-toolbar class="custom-toolbar mat-elevation-z4">
+  <div class="nav-wrapper">
+    <div class="logo">AnviWarehouse</div>
+    <div class="nav-links">
+      <button class="click" mat-button routerLink="/">Home</button>
+      <button class="click" mat-button routerLink="/register">Register</button>
+      <button class="click" mat-button routerLink="/login">Login</button>
+      <button class="click" mat-button routerLink="/login">Bookings</button>
+      <button class="click" mat-button routerLink="/tracking">Tracking</button>
+      <a class="click "  mat-button [routerLink]="['/']" fragment="services">Our Services</a>
+      <a class="click"  mat-button [routerLink]="['/']" fragment="about">About Us</a>
+    </div>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,28 @@
+<div class="auth-container">
+  <mat-card class="auth-card animate__animated animate__fadeInDown">
+    <mat-card-title class="card-title">Register</mat-card-title>
+    <form #registerForm="ngForm" (ngSubmit)="onRegister()">
+
+      <mat-form-field appearance="fill" class="full-width animate__animated animate__fadeInUp animate__delay-1s">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" required name="email" [(ngModel)]="credentials.email">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width animate__animated animate__fadeInUp animate__delay-1s">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" required name="password" [(ngModel)]="credentials.password">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width animate__animated animate__fadeInUp animate__delay-1s">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" required name="confirmPassword" [(ngModel)]="credentials.confirmPassword">
+      </mat-form-field>
+
+      <div [ngClass]="{ 'error-msg': isError, 'success-msg': !isError }" *ngIf="message">
+        {{ message }}
+      </div>
+
+      <button mat-raised-button color="primary" class="full-width animate__animated animate__fadeInUp animate__delay-2s" type="submit">Register</button>
+    </form>
+  </mat-card>
+</div>

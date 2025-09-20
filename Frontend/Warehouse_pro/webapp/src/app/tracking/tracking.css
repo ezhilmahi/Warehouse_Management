@@ -1,0 +1,22 @@
+.track-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.result {
+  margin-top: 20px;
+  background-color: #e3f2fd;
+  padding: 15px;
+  border-left: 5px solid #2196f3;
+}
+
+.error {
+  margin-top: 20px;
+  color: red;
+}
